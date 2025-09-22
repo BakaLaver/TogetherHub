@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -18,8 +18,8 @@ namespace Infrastructure.Migrations
                     Id = table.Column<Guid>(type: "TEXT", nullable: false),
                     Title = table.Column<string>(type: "TEXT", nullable: false),
                     EventStrat = table.Column<DateTime>(type: "TEXT", nullable: true),
-                    Summery = table.Column<string>(type: "TEXT", nullable: false),
-                    TopycType = table.Column<string>(type: "TEXT", nullable: false),
+                    Summary = table.Column<string>(type: "TEXT", nullable: false),
+                    TopicType = table.Column<string>(type: "TEXT", nullable: false),
                     City = table.Column<string>(type: "TEXT", nullable: false),
                     Street = table.Column<string>(type: "TEXT", nullable: false)
                 },

@@ -25,7 +25,7 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime?>("EventStrat")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Summery")
+                    b.Property<string>("Summary")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -33,7 +33,7 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("TopycType")
+                    b.Property<string>("TopicType")
                         .IsRequired()
                         .HasColumnType("TEXT");
 

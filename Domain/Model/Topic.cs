@@ -6,8 +6,8 @@ namespace Domain.Model
     {
         public string Title { get; set; } = default!;
         public DateTime? EventStrat { get; set; } = default!;
-        public string Summery { get; set; } = default!;
-        public string TopycType { get; set; } = default!;
+        public string Summary { get; set; } = default!;
+        public string TopicType { get; set; } = default!;
         public Location Location { get; set; } = default!;
 
         public static Topic Create(
@@ -24,8 +24,9 @@ namespace Domain.Model
                 Id = id,
                 Title = title,
                 EventStrat = eventStart,
-                Summery = summery,
-                Location = location
+                Summary = summery,
+                Location = location,
+                TopicType = topicType
             };
 
             return topic;

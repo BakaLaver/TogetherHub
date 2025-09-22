@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250922044809_initial")]
-    partial class initial
+    [Migration("20250922193514_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,7 +28,7 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime?>("EventStrat")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Summery")
+                    b.Property<string>("Summary")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -36,7 +36,7 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("TopycType")
+                    b.Property<string>("TopicType")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
