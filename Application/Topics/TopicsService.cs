@@ -1,4 +1,5 @@
 ﻿using Application.Data.DataBaseContext;
+using Domain.Model;
 using Domain.ValueObjects;
 using Microsoft.Extensions.Logging;
 
@@ -20,10 +21,13 @@ namespace Application.Topics
 
         public async Task<List<Topic>> GetTopicAsync()
         {
-            var topics = await dbContext.Topics
-                .AsNoTracking()
-                .ToListAsync();
-            return topics;
+           
+                var topics = await dbContext.Topics
+                    .AsNoTracking()
+                    .ToListAsync();
+                return topics;
+            
+
         }
 
         public Task<Topic> GetTopicAsynck(Guid id)
