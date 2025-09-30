@@ -3,11 +3,11 @@ namespace Domain.ValueObjects
 {
     public record TopicId
     {
-        public Guid Vulue {  get;}
+        public Guid Value {  get;}
 
         private TopicId(Guid value) 
         {
-            this.Vulue = value;
+            this.Value = value;
         }
 
         public static TopicId Of(Guid value) 

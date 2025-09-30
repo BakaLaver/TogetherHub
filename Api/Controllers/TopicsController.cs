@@ -12,7 +12,7 @@ namespace API.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Topic>>> GetTopics() 
         {
-            return Ok(await topicsService.GetTopicAsync());
+            return Ok(await topicsService.GetTopicsAsync());
         }
     }
 }

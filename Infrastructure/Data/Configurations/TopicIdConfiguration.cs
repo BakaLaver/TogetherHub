@@ -6,7 +6,7 @@
         {
             builder.Property(topic => topic.Id)
                 .HasConversion(
-                    id => id.Vulue,
+                    id => id.Value,
                     value => TopicId.Of(value)
                 );
         }
