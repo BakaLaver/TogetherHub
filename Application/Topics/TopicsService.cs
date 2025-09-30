@@ -2,6 +2,7 @@
 using Domain.Model;
 using Domain.ValueObjects;
 using Microsoft.Extensions.Logging;
+using System;
 
 namespace Application.Topics
 {
@@ -14,7 +15,7 @@ namespace Application.Topics
             throw new NotImplementedException();
         }
 
-        public Task DeleteTopicAsync(TopicId id)
+        public Task DeleteTopicAsync(Guid id)
         {
             throw new NotImplementedException();
         }
@@ -35,7 +36,7 @@ namespace Application.Topics
             throw new NotImplementedException();
         }
 
-        public Task<Topic> UpdateTopicAsync(TopicId id, Topic topicRequestDto)
+        public Task<Topic> UpdateTopicAsync(Guid id, Topic topicRequestDto)
         {
             throw new NotImplementedException();
         }
