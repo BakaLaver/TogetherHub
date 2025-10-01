@@ -17,7 +17,7 @@ namespace Application.Topics
             throw new NotImplementedException();
         }
 
-        public Task DeleteTopicAsync(Guid id)
+        public async Task DeleteTopicAsync(Guid id)
         {
             throw new NotImplementedException();
         }
@@ -33,9 +33,17 @@ namespace Application.Topics
 
         }
 
-        public Task<TopicResponseDto> GetTopicAsync(Guid id)
+        public async Task<TopicResponseDto> GetTopicAsync(Guid id)
         {
-            throw new NotImplementedException();
+            TopicId topicId = TopicId.Of(id);
+            var result = await dbContext.Topics.FindAsync([topicId]);
+
+            if(result is null) 
+            {
+                throw new TopicNotFoundException(id);
+            }
+
+            return result.ToTopicResponseDto();
         }
 
         public Task<Topic> UpdateTopicAsync(Guid id, Topic topicRequestDto)
