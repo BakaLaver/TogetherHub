@@ -11,7 +11,7 @@ namespace API.Controllers
     public class TopicsController(ITopicsService topicsService) : ControllerBase
     {
         [HttpGet]
-        public async Task<ActionResult<List<TopicResponseDto>>> GetTopics() 
+        public async Task<ActionResult<List<TopicResponseDto>>> GetTopics()
         {
             return Ok(await topicsService.GetTopicsAsync());
         }
@@ -26,6 +26,12 @@ namespace API.Controllers
         public async Task<ActionResult<TopicResponseDto>> CreateTopic(CreateTopicDto dto)
         {
             return Ok(await topicsService.CreateTopicAsync(dto));
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<TopicResponseDto>> UpdateTopic(Guid id, [FromBody] UpdateTopicDto dto)
+        {
+            return Ok(await topicsService.UpdateTopicAsync(id, dto));
         }
     }
 }
