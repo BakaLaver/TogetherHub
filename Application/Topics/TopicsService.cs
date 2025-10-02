@@ -29,7 +29,16 @@ namespace Application.Topics
 
         public async Task DeleteTopicAsync(Guid id)
         {
-            throw new NotImplementedException();
+            TopicId topicId = TopicId.Of(id);
+            var topic = await dbContext.Topics.FindAsync([topicId]);
+
+            if (topic is null)
+            {
+                throw new TopicNotFoundException(id);
+            }
+
+            dbContext.Topics.Remove(topic);
+            await dbContext.SaveChangesAsync(CancellationToken.None);
         }
 
         public async Task<List<TopicResponseDto>> GetTopicsAsync()
