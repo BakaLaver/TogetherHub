@@ -11,12 +11,23 @@ namespace Api
             services.AddExceptionHandler<CustomExeptionHandler>();
             services.AddControllers();
             services.AddOpenApi();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("react-policy", policy => 
+                {
+                    policy.AllowAnyHeader()
+                    .AllowAnyHeader()
+                    .WithOrigins("http://localhost:5000");
+                });
+            });
 
             return services;
         }
 
          public static WebApplication UseApiServices(this WebApplication app) 
         {
+
+            app.UseCors("react-policy");
             if (app.Environment.IsDevelopment())
             {
                 app.MapOpenApi();
