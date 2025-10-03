@@ -1,10 +1,5 @@
 ﻿using Application.Data.DataBaseContext;
-using Application.DTO;
-using Application.Extensions;
-using Domain.Model;
-using Domain.ValueObjects;
-using Microsoft.Extensions.Logging;
-using System;
+
 
 namespace Application.Topics
 {

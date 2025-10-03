@@ -1,6 +1,4 @@
-﻿using Application.DTO;
-using Microsoft.AspNetCore.Components.Web;
-
+﻿
 namespace Application.Extensions
 {
     public static class TopicExtensions
