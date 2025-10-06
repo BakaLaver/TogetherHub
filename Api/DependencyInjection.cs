@@ -1,4 +1,5 @@
 ﻿using Api.Exeptions.Handler;
+using Application.Topics.Queries.GetTopics;
 
 namespace Api
 {
@@ -20,6 +21,10 @@ namespace Api
                     .WithOrigins("http://localhost:5000");
                 });
             });
+
+            services.AddMediatR(config => config
+            .RegisterServicesFromAssembly(typeof(GetTopicsHandler).Assembly)
+            );
 
             return services;
         }
