@@ -1,8 +1,9 @@
 ﻿using Application.Data.DataBaseContext;
 
 
-namespace Application.Topics
+namespace Application.Topics.old
 {
+    [Obsolete("Все безнадёжно устарело", true)]
     public class TopicsService(IApplicationDbContext dbContext,
             ILogger<TopicsService> logger) : ITopicsService
     {

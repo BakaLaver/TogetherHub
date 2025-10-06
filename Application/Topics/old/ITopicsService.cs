@@ -1,5 +1,6 @@
-﻿namespace Application.Topics
+﻿namespace Application.Topics.old
 {
+    [Obsolete ("Все безнадёжно устарело", true)]
     public interface ITopicsService
     {
         Task<List<TopicResponseDto>> GetTopicsAsync();
