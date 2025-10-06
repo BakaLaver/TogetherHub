@@ -1,5 +1,4 @@
-using Application.Topics.Queries.GetTopics;
-using MediatR;
+
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers

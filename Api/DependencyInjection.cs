@@ -1,5 +1,4 @@
 ﻿using Api.Exeptions.Handler;
-using Application.Topics.Queries.GetTopics;
 
 namespace Api
 {
