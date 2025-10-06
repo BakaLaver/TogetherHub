@@ -6,3 +6,5 @@ global using Application.DTO;
 global using Application.Extensions;
 global using Application.Topics.Queries.GetTopics;
 global using MediatR;
+
+global using Application.Topics.Queries.GetTopic;
