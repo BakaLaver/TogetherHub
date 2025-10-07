@@ -8,3 +8,4 @@ global using Application.Topics.Queries.GetTopics;
 global using MediatR;
 
 global using Application.Topics.Queries.GetTopic;
+global using Application.Topics.Commands.Create;
