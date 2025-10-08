@@ -1,5 +1,6 @@
 ﻿using Api.Exeptions.Handler;
 
+
 namespace Api
 {
     public static class DependencyInjection
@@ -24,6 +25,8 @@ namespace Api
             services.AddMediatR(config => config
             .RegisterServicesFromAssembly(typeof(GetTopicsHandler).Assembly)
             );
+
+            services.AddAutoMapper(typeof(MappingProfile).Assembly);
 
             return services;
         }
