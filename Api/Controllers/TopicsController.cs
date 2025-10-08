@@ -1,3 +1,4 @@
+
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -26,9 +27,10 @@ namespace API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<TopicResponseDto>> UpdateTopic(Guid id, [FromBody] UpdateTopicDto dto)
+        public async Task<IResult> UpdateTopic(Guid id, [FromBody] UpdateTopicDto dto)
         {
-            return Ok(null);
+            var response = await mediator.Send(new UpdateTopicCommand(id, dto));
+            return Results.Ok(response.Result);
         }
 
         [HttpDelete("{id}")]

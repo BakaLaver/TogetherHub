@@ -1,5 +1,7 @@
 ﻿
 
+using Domain.ValueObjects;
+
 namespace Domain.Model
 {
     public class Topic:Entity<TopicId>
@@ -30,6 +32,17 @@ namespace Domain.Model
             };
 
             return topic;
+        }
+        public void Update(string title, string summery, string topicType, DateTime eventStart, string city, string street) 
+        {
+            this.Title = title ?? this.Title;
+            this.Summary = summery ?? this.Summary;
+            this.TopicType = topicType ?? this.TopicType;
+            this.EventStrat = eventStart;
+            this.Location = Location.Of(
+                    city ?? this.Location.City,
+                    street ?? this.Location.Street
+                );
         }
     }
 }
