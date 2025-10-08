@@ -25,7 +25,7 @@ namespace Infrastructure.Migrations
                     b.Property<DateTimeOffset?>("DeletedAt")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime?>("EventStrat")
+                    b.Property<DateTime?>("EventStart")
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("IsDeleted")

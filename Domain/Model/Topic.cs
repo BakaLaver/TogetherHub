@@ -7,7 +7,7 @@ namespace Domain.Model
     public class Topic:Entity<TopicId>
     {
         public string Title { get; set; } = default!;
-        public DateTime? EventStrat { get; set; } = default!;
+        public DateTime? EventStart { get; set; } = default!;
         public string Summary { get; set; } = default!;
         public string TopicType { get; set; } = default!;
         public Location Location { get; set; } = default!;
@@ -25,7 +25,7 @@ namespace Domain.Model
             {
                 Id = id,
                 Title = title,
-                EventStrat = eventStart,
+                EventStart = eventStart,
                 Summary = summery,
                 Location = location,
                 TopicType = topicType

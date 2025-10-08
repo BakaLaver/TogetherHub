@@ -15,7 +15,7 @@ namespace Application.Extensions
                 Location: new LocationDto(
                     topic.Location.City,
                     topic.Location.Street),
-                EventStart: topic.EventStrat
+                EventStart: topic.EventStart
                 );
         }
         public static List<TopicResponseDto> ToTopicResponseDtoList (this List <Topic> topics) 

@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251002040132_Add soft delete field")]
+    [Migration("20251008041043_Add soft delete field")]
     partial class Addsoftdeletefield
     {
         /// <inheritdoc />
@@ -28,7 +28,7 @@ namespace Infrastructure.Migrations
                     b.Property<DateTimeOffset?>("DeletedAt")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime?>("EventStrat")
+                    b.Property<DateTime?>("EventStart")
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("IsDeleted")

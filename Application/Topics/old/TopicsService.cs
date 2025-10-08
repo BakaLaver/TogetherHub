@@ -77,7 +77,7 @@ namespace Application.Topics.old
             topic.Title = dto.Title ?? topic.Title;
             topic.Summary = dto.Summary ?? topic.Summary;
             topic.TopicType = dto.TopicType ?? topic.TopicType;
-            topic.EventStrat = dto.EventStart;
+            topic.EventStart = dto.EventStart;
             topic.Location = Location.Of(
                     dto.Location.City,
                     dto.Location.Street

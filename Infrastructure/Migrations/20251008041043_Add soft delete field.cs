@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class Addsoftdeletefield : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,11 +17,13 @@ namespace Infrastructure.Migrations
                 {
                     Id = table.Column<Guid>(type: "TEXT", nullable: false),
                     Title = table.Column<string>(type: "TEXT", nullable: false),
-                    EventStrat = table.Column<DateTime>(type: "TEXT", nullable: true),
+                    EventStart = table.Column<DateTime>(type: "TEXT", nullable: true),
                     Summary = table.Column<string>(type: "TEXT", nullable: false),
                     TopicType = table.Column<string>(type: "TEXT", nullable: false),
                     City = table.Column<string>(type: "TEXT", nullable: false),
-                    Street = table.Column<string>(type: "TEXT", nullable: false)
+                    Street = table.Column<string>(type: "TEXT", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "INTEGER", nullable: false),
+                    DeletedAt = table.Column<DateTimeOffset>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
