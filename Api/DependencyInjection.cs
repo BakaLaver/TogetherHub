@@ -1,4 +1,5 @@
 ﻿using Api.Exeptions.Handler;
+using Api.Security.Extensions;
 
 
 namespace Api
@@ -28,9 +29,12 @@ namespace Api
 
             services.AddAutoMapper(typeof(MappingProfile).Assembly);
 
+            services.AddIdentityServices(configuration);
+
             return services;
         }
 
+        
          public static WebApplication UseApiServices(this WebApplication app) 
         {
 
