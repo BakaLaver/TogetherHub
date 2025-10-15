@@ -1,4 +1,6 @@
-﻿namespace Domain.Security.Dtos
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Domain.Security.Dtos
 {
     public record RegisterUserRequestDto(
             string FullName,
