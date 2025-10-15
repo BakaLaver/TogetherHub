@@ -18,6 +18,7 @@ namespace Api.Security.Extensions
                 opition.Password.RequireLowercase = false;
                 opition.Password.RequireUppercase = false;
                 opition.Password.RequireNonAlphanumeric = false;
+                opition.User.RequireUniqueEmail = true;
             })
             .AddEntityFrameworkStores<ApplicationDbContext>();
             string secretKey = config["AuthSettings:SecretKey"]!;
