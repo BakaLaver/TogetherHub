@@ -26,7 +26,9 @@ namespace Application.Authentication.Commands
             var user = new CustomIdentityUser
             {
                 Email = request.Dto.Email,
-                UserName = request.Dto.UserName
+                UserName = request.Dto.UserName,
+                FullName = request.Dto.UserName,
+                About = request.Dto.UserName
             };
 
             IdentityResult result = await userManager
