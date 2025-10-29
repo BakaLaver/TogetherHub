@@ -40,7 +40,7 @@ namespace Api.Security.Extensions
 
 
             services.AddAuthorization();
-            services.AddScoped<IJwtSecurityService, JwtSecurityService>();
+            //services.AddScoped<IJwtSecurityService, JwtSecurityService>();
             return services;
         }
     }

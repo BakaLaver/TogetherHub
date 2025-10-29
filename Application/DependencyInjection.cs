@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Api.Security.Services;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Application
@@ -9,9 +10,9 @@ namespace Application
               this IServiceCollection services, IConfiguration configuration)
 
         {
-            //services.AddScoped<ITopicsService, TopicsService>();
-
+            services.AddScoped<IJwtSecurityService, JwtSecurityService>();
             return services;
         }
     }
 }
+            //services.AddScoped<ITopicsService, TopicsService>();

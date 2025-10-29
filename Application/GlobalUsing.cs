@@ -5,4 +5,5 @@ global using Application.Extensions;
 global using Domain.ValueObjects;
 global using Microsoft.Extensions.Logging;
 global using Application.Data.DataBaseContext;
+global using Microsoft.AspNetCore.Identity;
 global using Shared.CQRS;
